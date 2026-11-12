@@ -1,0 +1,4 @@
+.DS_Store
+*.error
+mods/notion-sidebar/avatars/custom/*
+!mods/notion-sidebar/avatars/custom/.gitkeep

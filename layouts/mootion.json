@@ -1,0 +1,180 @@
+{
+  "id": "root",
+  "cloned_from": {
+    "name": "main",
+    "version": "0.1.15"
+  },
+  "type": "row",
+  "titlebar": "none",
+  "traffic_lights": [
+    14,
+    16
+  ],
+  "theme": {
+    "light": "mootion-light",
+    "dark": "mootion-dark"
+  },
+  "ui_font": ".SystemUIFont",
+  "background": "canvas",
+  "terminal_padding": [
+    56,
+    6
+  ],
+  "divider": {
+    "width": 1,
+    "color": "border"
+  },
+  "children": [
+    {
+      "id": "sidebar",
+      "type": "column",
+      "size": {
+        "px": 256
+      },
+      "min": 44,
+      "max": 480,
+      "background": "chrome",
+      "resizable": false,
+      "children": [
+        {
+          "id": "brand",
+          "type": "block",
+          "size": {
+            "px": 46
+          },
+          "window_drag": true,
+          "content": {
+            "mod": "mootion-sidebar",
+            "props": {
+              "part": "header"
+            }
+          }
+        },
+        {
+          "id": "sidebar-body",
+          "type": "block",
+          "content": {
+            "mod": "mootion-sidebar"
+          }
+        }
+      ]
+    },
+    {
+      "id": "work",
+      "type": "column",
+      "resizable": false,
+      "background": "background",
+      "children": [
+        {
+          "id": "tabs",
+          "type": "block",
+          "size": {
+            "px": 44
+          },
+          "window_drag": true,
+          "content": {
+            "mod": "mootion-crumbs"
+          }
+        },
+        {
+          "id": "work-body",
+          "type": "row",
+          "divider": {
+            "width": 1,
+            "color": "border"
+          },
+          "children": [
+            {
+              "id": "center",
+              "type": "stack",
+              "active": "main",
+              "children": [
+                {
+                  "id": "main",
+                  "type": "block",
+                  "content": {
+                    "tab": "active",
+                    "pane": {
+                      "gap": 1,
+                      "radius": 0,
+                      "background": "background",
+                      "lone": true,
+                      "border": {
+                        "width": 0,
+                        "color": "background"
+                      },
+                      "focus": {
+                        "width": 0,
+                        "color": "background"
+                      },
+                      "header": {
+                        "content": {
+                          "mod": "mootion-page"
+                        },
+                        "height": 136,
+                        "position": "top",
+                        "reveal": "always"
+                      }
+                    }
+                  }
+                },
+                {
+                  "id": "inbox",
+                  "type": "block",
+                  "background": "background",
+                  "content": {
+                    "mod": "mootion-inbox"
+                  }
+                },
+                {
+                  "id": "customize",
+                  "type": "block",
+                  "background": "background",
+                  "content": {
+                    "mod": "mootion-customize"
+                  }
+                }
+              ]
+            },
+            {
+              "id": "panel",
+              "type": "column",
+              "hidden": true,
+              "size": {
+                "px": 300
+              },
+              "min": 240,
+              "max": 900,
+              "background": "background",
+              "children": [
+                {
+                  "id": "panel-body",
+                  "type": "stack",
+                  "active": "files",
+                  "children": [
+                    {
+                      "id": "files",
+                      "type": "block",
+                      "content": {
+                        "mod": "mootion-files"
+                      }
+                    },
+                    {
+                      "id": "changes",
+                      "type": "block",
+                      "content": {
+                        "mod": "mootion-changes"
+                      }
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "toast": "mootion-toast",
+  "preview": "layouts/mootion.png"
+}

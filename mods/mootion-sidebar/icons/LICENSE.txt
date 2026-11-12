@@ -1,0 +1,1 @@
+Icons from lucide-static v1.72.0 (https://lucide.dev), ISC license. Each SVG keeps its license comment.
